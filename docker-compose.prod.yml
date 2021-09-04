@@ -1,0 +1,40 @@
+version: "3.7"
+
+# This file sets up service dependencies for local development
+
+# networks:
+#   prometheus:
+#     external:
+#       name: prometheus
+
+services:
+  ts-node-docker:
+    build:
+      target: production
+    command: node build/main.js
+
+  mongo:
+    image: mongo
+    volumes:
+      - .docker/data/db:/data/db
+    ports:
+      - "27017:27017"
+
+  # redis:
+  #     image: redis:6
+  #     volumes:
+  #       - .docker/data/redis:/data
+  #     restart: unless-stopped
+  #     user: "501:20"
+
+  # minio:
+  #   image: "minio/minio"
+  #   command: minio server /export
+  #   healthcheck:
+  #     disable: true
+  #   ports:
+  #     - "9000:9000"
+  #   environment:
+  #     - MINIO_ACCESS_KEY=dev_access
+  #     - MINIO_SECRET_KEY=dev_secret
+

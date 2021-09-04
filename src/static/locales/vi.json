@@ -1,0 +1,10 @@
+{
+	"validate.username.empty": "Username không được bỏ trống",
+	"validate.username.is.alphanumeric": "Username phải có chữ và số",
+	"validate.username.is.length": "Username phải có ít nhất 6 kí tự",
+	"validate.username.already": "Username đã tồn tại",
+	"username.does.not.empty": "Tài khoản không được bỏ trống",
+	"validate.password.length": "Mật khẩu phải có ít nhất 6 kí tự",
+	"validate.password.confirmation.confim.old.pass": "Xác nhận mật khẩu không chính xác",
+	"validate.password.not.empty": "validate.password.not.empty"
+}

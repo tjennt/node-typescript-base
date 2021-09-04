@@ -1,0 +1,30 @@
+version: "3.7"
+
+# This file sets up service dependencies for local development
+
+# networks:
+#   prometheus:
+#     external:
+#       name: prometheus
+
+services:
+  ts-node-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+    container_name: ts-node-docker
+    expose:
+      - '4000'
+    ports:
+      - '4000:4000'
+    command: yarn dev
+
+  mongo:
+    image: mongo
+    volumes:
+      - .docker/data/db:/data/db
+    ports:
+      - "27017:27017"

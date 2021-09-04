@@ -1,0 +1,10 @@
+{
+	"validate.username.empty": "Username does not empty",
+	"validate.username.is.alphanumeric": "Username must be Alphanumeric",
+	"validate.username.is.length": "Username more than 6 degits",
+	"validate.username.already": "Username already in use",
+	"username.does.not.empty": "Username dose not empty",
+	"validate.password.length": "Password confirmation more than 6 degits",
+	"validate.password.confirmation.confim.old.pass": "Password confirmation does not match password",
+	"validate.password.not.empty": "validate.password.not.empty"
+}
